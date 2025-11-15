@@ -160,7 +160,7 @@ For help or issues, open an issue on GitHub or contact me.
 
 Made with ❤️ using React + OpenAI
 
-## 📸 Screenshots (Optional)
+## 📸 Screenshots 
 
 
 
