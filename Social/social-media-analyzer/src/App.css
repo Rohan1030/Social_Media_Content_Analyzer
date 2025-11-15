@@ -1,0 +1,422 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 25%, #ddd6fe 50%, #fce7f3 75%, #fce7f3 100%);
+  padding: 24px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.header-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.icon-sparkles {
+  width: 32px;
+  height: 32px;
+  color: #9333ea;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+/* Dropzone */
+.dropzone {
+  border: 2px dashed #d1d5db;
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dropzone:hover {
+  border-color: #a855f7;
+  background-color: #faf5ff;
+}
+
+.dropzone-active {
+  border-color: #9333ea;
+  background-color: #f3e8ff;
+}
+
+.icon-upload {
+  width: 64px;
+  height: 64px;
+  color: #9ca3af;
+  margin: 0 auto 16px;
+}
+
+.dropzone-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.dropzone-or {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.dropzone-info {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-top: 16px;
+}
+
+/* File Input */
+.file-label {
+  display: inline-block;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #9333ea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7e22ce;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+}
+
+.btn-disabled {
+  background-color: #9ca3af;
+  color: white;
+  cursor: not-allowed;
+}
+
+/* File Meta */
+.file-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.file-name {
+  font-weight: 500;
+}
+
+.file-size {
+  color: #9ca3af;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #9333ea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  color: #6b7280;
+}
+
+/* Error Card */
+.error-card {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.icon-error {
+  width: 20px;
+  height: 20px;
+  color: #dc2626;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.error-title {
+  font-weight: 600;
+  color: #7f1d1d;
+  margin-bottom: 4px;
+}
+
+.error-message {
+  color: #b91c1c;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-section {
+  width: 24px;
+  height: 24px;
+  color: #9333ea;
+}
+
+/* Text Preview */
+.text-preview {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 16px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.extracted-text {
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+  color: #374151;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+}
+
+/* Tips Container */
+.tips-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tip Card */
+.tip-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tip-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.tip-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.icon-check {
+  width: 20px;
+  height: 20px;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.tip-body {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-left: 28px;
+}
+
+/* Platform Badges */
+.platform-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.platform-instagram {
+  background-color: #fce7f3;
+  color: #be185d;
+}
+
+.platform-linkedin {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.platform-twitter {
+  background-color: #e0f2fe;
+  color: #075985;
+}
+
+.platform-facebook {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.platform-tiktok {
+  background-color: #f3e8ff;
+  color: #7c3aed;
+}
+
+.platform-general {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.icon-empty {
+  width: 64px;
+  height: 64px;
+  color: #d1d5db;
+  margin: 0 auto 16px;
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.empty-subtitle {
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  .header-title h1 {
+    font-size: 1.875rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .dropzone {
+    padding: 32px 16px;
+  }
+
+  .tip-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .platform-badge {
+    align-self: flex-start;
+  }
+}
+
+/* Scrollbar Styling */
+.text-preview::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-preview::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.text-preview::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.text-preview::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
